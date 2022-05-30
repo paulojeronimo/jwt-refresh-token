@@ -1,0 +1,19 @@
+### Register route
+POST http://localhost:3500/register
+Content-Type: application/json
+
+{ "user": "paulojeronimo", "pwd": "test1@2#3" }
+
+### Login
+POST http://localhost:3500/auth
+Content-Type: application/json
+
+{ "user": "paulojeronimo", "pwd": "test1@2#3" }
+
+### Get employees
+GET http://localhost:3500/employees
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBhdWxvamVyb25pbW8iLCJpYXQiOjE2NTM5NDE5MDAsImV4cCI6MTY1Mzk0MTkzMH0.Tdm1sIos3aNYxeyQv0ZxJTe0AA4nJAhs0iD-BAbQEtk
+
+### Refresh token
+GET http://localhost:3500/refresh
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBhdWxvamVyb25pbW8iLCJpYXQiOjE2NTM5NDIyOTEsImV4cCI6MTY1NDAyODY5MX0.W-mkpCTVxHOp1hmfVANUnhFL-K0JjKQo-ICav37RlkU
